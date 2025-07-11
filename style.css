@@ -598,6 +598,11 @@ main {
 .disnone {
   display: none;
 }
+.icons-container img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 
 .modal-light,
 .modal-dark {
@@ -686,9 +691,35 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 45vw;
   margin-top: 50px;
   padding: 0 20px;
+}
+@media screen and (min-width: 931px) and (max-width: 1280px) {
+  .todo-list {
+    width: 51vw;
+  }
+  
+}
+@media screen and (max-width: 700px) {
+  .todo-list {
+    width: 100%;
+  }
+  .todo-item{
+    width: 56vw;
+    max-width: 931px;
+    min-width: 300px;
+  }
+  
+}
+@media screen and (min-width: 700px) and (max-width: 931px) {
+  
+  .todo-item{
+    width: 56vw !important;
+    max-width: 931px;
+    min-width: 300px;
+  }
+  
 }
 
 .todo-item {
@@ -696,7 +727,7 @@ main {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  max-width: 650px;
+  /* max-width: 650px; */
   /* flex-wrap: wrap; */
   padding: 11px 0;
   border-bottom: 0.5px solid #6C63FF;
