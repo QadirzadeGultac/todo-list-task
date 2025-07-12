@@ -15,8 +15,6 @@ document.querySelectorAll('.options li').forEach(option => {
     options.classList.remove('open');
     openIcon.classList.remove('disnone');
     closeIcon.classList.add('disnone');
-
-    // Filtrlə
     filterTodos(option.textContent);
   });
 });
@@ -106,7 +104,7 @@ darkmode.addEventListener('click', () => {
   darkmode.classList.add('disnone');
   lightmode.classList.remove('disnone');
 
-  checkEmptyState(); // Rejim dəyişəndə yoxlama
+  checkEmptyState();
 });
 
 lightmode.addEventListener('click', () => {
@@ -116,7 +114,7 @@ lightmode.addEventListener('click', () => {
   darkmode.classList.remove('disnone');
   lightmode.classList.add('disnone');
 
-  checkEmptyState(); // Rejim dəyişəndə yoxlama
+  checkEmptyState();
 });
 
 // ------------------------
@@ -260,7 +258,7 @@ function addNewTodoItem(noteText) {
   const activeFilter = selected.childNodes[0].textContent;
   filterTodos(activeFilter);
 
-  checkEmptyState(); // Yeni item əlavə olunanda yoxla
+  checkEmptyState();
 }
 
 // ------------------------
@@ -305,7 +303,18 @@ searchIconLight.addEventListener('click', () => {
   const query = inputLight.value.trim();
   searchTodos(query);
 });
-
+inputLight.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    const query = inputLight.value.trim();
+    searchTodos(query);
+  }
+});
+inputDark.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    const query = inputDark.value.trim();
+    searchTodos(query);
+  }
+});
 searchIconDark.addEventListener('click', () => {
   const query = inputDark.value.trim();
   searchTodos(query);
