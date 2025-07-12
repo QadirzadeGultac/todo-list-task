@@ -124,35 +124,60 @@ lightmode.addEventListener('click', () => {
 const applyBtnLight = document.querySelector(".modal-light-apply-button");
 const applyBtnDark = document.querySelector(".modal-dark-apply-button");
 const todoList = document.querySelector(".todo-list");
+const inputlight = document.querySelector(".modal-light-input");
 
 applyBtnLight.addEventListener("click", () => {
-  const input = document.querySelector(".modal-light-content input");
-  const noteText = input.value.trim();
+  const noteText = inputlight.value.trim();
 
   if (noteText !== "") {
     addNewTodoItem(noteText);
-    input.value = "";
+    inputlight.value = "";
     modalLight.classList.add("disnone");
     checkEmptyState();
   } else {
     alert("Note boş ola bilməz!");
   }
 });
+inputlight.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const noteText = inputlight.value.trim();
+    if (noteText !== "") {
+      addNewTodoItem(noteText);
+      inputLight.value = "";
+      modalLight.classList.add("disnone");
+      checkEmptyState();
+    } else {
+      alert("Note boş ola bilməz!");
+    }
+  }
+});
 
+const inputdark = document.querySelector(".modal-dark-content input");
 applyBtnDark.addEventListener("click", () => {
-  const input = document.querySelector(".modal-dark-content input");
-  const noteText = input.value.trim();
+  const noteText = inputdark.value.trim();
 
   if (noteText !== "") {
     addNewTodoItem(noteText);
-    input.value = "";
+    inputdark.value = "";
     modalDark.classList.add("disnone");
     checkEmptyState();
   } else {
     alert("Note boş ola bilməz!");
   }
 });
-
+inputDark.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const noteText = inputDark.value.trim();
+    if (noteText !== "") {
+      addNewTodoItem(noteText);
+      inputDark.value = "";
+      modalDark.classList.add("disnone");
+      checkEmptyState();
+    } else {
+      alert("Note boş ola bilməz!");
+    }
+  }
+});
 // ------------------------
 // Empty state yoxlama funksiyası
 // ------------------------

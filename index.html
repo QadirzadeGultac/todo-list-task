@@ -1,93 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <title>TODO-LIST</title>
-</head>
-<body>
-  <header>
-    <h1>TODO-LIST</h1>
-  </header>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>TODO-LIST</title>
+  </head>
+  <body>
+    <header>
+      <h1>TODO-LIST</h1>
+    </header>
 
-  <main>
-    <section class="search">
-      <!-- Light mode -->
-      <div class="search-bar-light">
-        <p class="note-p-light disnone">Note |</p>
-        <input class="input-light" type="text" placeholder="Search note..." />
-        <img src="assets/searchPurple.svg" alt="search icon" />
-      </div>
-
-      <!-- Dark mode -->
-      <div class="search-bar-dark disnone">
-        <p class="note-p-dark disnone">Note |</p>
-        <input class="input-dark" type="text" placeholder="Search note..." />
-        <img src="assets/searchWhite.svg" alt="search icon" />
-      </div>
-
-      <!-- Custom select -->
-      <div class="custom-select">
-        <div class="selected">All
-          <img class="open" src="assets/arrowOpen.svg" alt="open" />
-          <img class="close disnone" src="assets/ArrowClose.svg" alt="close" />
+    <main>
+      <section class="search">
+        <!-- Light mode -->
+        <div class="search-bar-light">
+          <p class="note-p-light disnone">Note |</p>
+          <input class="input-light" type="text" placeholder="Search note..." />
+          <img src="assets/searchPurple.svg" alt="search icon" />
         </div>
-        <ul class="options">
-          <li>All</li>
-          <li>Complete</li>
-          <li>Incomplete</li>
-        </ul>
-      </div>
 
-      <!-- Light/Dark switch -->
-      <div class="light-dark">
-        <img class="darkMode" src="assets/darkMode.svg" alt="dark" />
-        <img class="lightMode disnone" src="assets/lightMode.svg" alt="light" />
-      </div>
-    </section>
+        <!-- Dark mode -->
+        <div class="search-bar-dark disnone">
+          <p class="note-p-dark disnone">Note |</p>
+          <input class="input-dark" type="text" placeholder="Search note..." />
+          <img src="assets/searchWhite.svg" alt="search icon" />
+        </div>
 
-    <section>
-      <div class="todo-list">
-        <img class="light-empty" src="assets/emptyLight.svg" alt="empty light"/>
-        <img class="dark-empty disnone" src="assets/emptyDark.svg" alt="empty dark"/>
-      </div>
+        <!-- Custom select -->
+        <div class="custom-select">
+          <div class="selected">All
+            <img class="open" src="assets/arrowOpen.svg" alt="open" />
+            <img class="close disnone" src="assets/ArrowClose.svg" alt="close" />
+          </div>
+          <ul class="options">
+            <li>All</li>
+            <li>Complete</li>
+            <li>Incomplete</li>
+          </ul>
+        </div>
 
-      <!-- Modals -->
-      <div class="modals">
-        <!-- Light modal -->
-        <div class="modal-light disnone">
-          <div class="modal-light-content">
-            <p>NEW NOTE</p>
-            <input placeholder="Input your note..." type="text" />
-            <div class="modal-light-buttons">
-              <button class="modal-light-close-button">CANCEL</button>
-              <button class="modal-light-apply-button">APPLY</button>
+        <!-- Light/Dark switch -->
+        <div class="light-dark">
+          <img class="darkMode" src="assets/darkMode.svg" alt="dark" />
+          <img class="lightMode disnone" src="assets/lightMode.svg" alt="light" />
+        </div>
+      </section>
+
+      <section>
+        <div class="todo-list">
+          <img class="light-empty" src="assets/emptyLight.svg" alt="empty light"/>
+          <img class="dark-empty disnone" src="assets/emptyDark.svg" alt="empty dark"/>
+        </div>
+
+        <!-- Modals -->
+        <div class="modals">
+          <!-- Light modal -->
+          <div class="modal-light disnone">
+            <div class="modal-light-content">
+              <p>NEW NOTE</p>
+              <input class="modal-light-input" placeholder="Input your note..." type="text" />
+              <div class="modal-light-buttons">
+                <button class="modal-light-close-button">CANCEL</button>
+                <button class="modal-light-apply-button">APPLY</button>
+              </div>
+            </div>
+          </div>
+          <!-- Dark modal -->
+          <div class="modal-dark disnone">
+            <div class="modal-dark-content">
+              <p>NEW NOTE</p>
+              <input placeholder="Input your note..." type="text" />
+              <div class="modal-dark-buttons">
+                <button class="modal-dark-close-button">CANCEL</button>
+                <button class="modal-dark-apply-button">APPLY</button>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Dark modal -->
-        <div class="modal-dark disnone">
-          <div class="modal-dark-content">
-            <p>NEW NOTE</p>
-            <input placeholder="Input your note..." type="text" />
-            <div class="modal-dark-buttons">
-              <button class="modal-dark-close-button">CANCEL</button>
-              <button class="modal-dark-apply-button">APPLY</button>
-            </div>
-          </div>
+      </section>
+
+      <!-- New note button -->
+      <section class="new-note">
+        <div class="new-note-button" id="openModalBtn">
+          <img src="assets/newNote.svg" alt="newNote" />
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- New note button -->
-    <section class="new-note">
-      <div class="new-note-button" id="openModalBtn">
-        <img src="assets/newNote.svg" alt="newNote" />
-      </div>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
-</body>
-</html>
+    <script src="app.js"></script>
+  </body>
+  </html>
